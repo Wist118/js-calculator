@@ -24,7 +24,16 @@ function numberButtonPress(num) {
 }
 
 function mathButtonPress(operator) {
-    
+    if(!resultVal) {
+        prevVal = newVal;
+    } else {
+        prevVal = resultVal;
+    }
+    newVal += num;
+    decimalClicked = false;
+    mathOperator = operator;
+    resultVal = "";
+    document.getElementById("entry").value = "";
 }
 
 function equalButtonPress(num) {
