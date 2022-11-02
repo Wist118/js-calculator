@@ -6,7 +6,21 @@ let decimalClicked = false;
 let storedMemoryVal = "";
 
 function numberButtonPress(num) {
+    if(resultVal) {
+        newVal = num;
+        resultVal = ""
 
+    } else {
+        if(num === '.') {
+            if(decimalClicked != true) {
+                newVal += num;
+                decimalClicked = true;
+            }
+        } else {
+            newVal += num;
+        }
+    }
+    document.getElementById("entry").value = newVal;
 }
 
 function mathButtonPress(operator) {
@@ -31,5 +45,8 @@ function copyButtonPress(num) {
 }
 
 function pasteButtonPress(num) {
-    
+    if(storedMemoryVal) {
+        document.getElementById("entry").value = storedMemoryVal;
+        newVal = storedMemoryVal;
+    }
 }
