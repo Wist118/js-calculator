@@ -16,3 +16,33 @@ body {
     font-size: 16px;
     font-weight: bold;
 }
+
+.calc-container {
+    width: 310px;
+    background-color: rgb(9, 114, 138);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.numberButton {
+    height: 59px;
+    width: 59px;
+    margin: 10px 4px;
+    border: none !important;
+}
+
+.operatorButton {
+    height: 59px;
+    width: 59px;
+    margin: 10px 4px;
+    border: none !important;
+}
+
+.equalButton {
+    height: 59px;
+    width: 126px;
+    margin: 10px 4px;
+    border: none !important;
+}
