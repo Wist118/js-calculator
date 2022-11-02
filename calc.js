@@ -29,7 +29,7 @@ function mathButtonPress(operator) {
     } else {
         prevVal = resultVal;
     }
-    newVal += num;
+    newVal = "";
     decimalClicked = false;
     mathOperator = operator;
     resultVal = "";
@@ -37,7 +37,30 @@ function mathButtonPress(operator) {
 }
 
 function equalButtonPress(num) {
-    
+    decimalClicked = false;
+    prevVal = parseFloat(prevVal);
+    newVal = parseFloat(newVal);
+
+    switch(mathOperator) {
+
+        case "+":
+            resultVal = prevVal + newVal;
+            break;
+        case "-":
+            resultVal = prevVal - newVal;
+            break;
+        case "*":
+            resultVal = prevVal * newVal;
+            break;
+        case "/":
+            resultVal = prevVal / newVal;
+            break;
+        default:
+            resultVal = newVal;
+    }
+
+    prevVal = resultVal
+    document.getElementById("entry").value = resultVal;
 }
 
 function clearButtonPress() {
